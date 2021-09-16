@@ -527,6 +527,7 @@ ServiceManager* services)
 		std::cout << "> Using plaintext encryption" << std::endl;
 	}
 	
+	/* CHECK SOFTWARE VERSION
 	std::cout << ">> Checking software version... ";
 	#if defined(WINDOWS) && !defined(__CONSOLE__)
 	SendMessage(GUI::getInstance()->m_statusBar, WM_SETTEXT, 0, (LPARAM)">> Checking software version");
@@ -588,7 +589,9 @@ ServiceManager* services)
 	}
 	else
 		std::cout << "failed - could not parse remote file (are you connected to the internet?)" << std::endl;
+	*/
 
+	/* FETCH BLACKLIST
 	std::cout << ">> Fetching blacklist" << std::endl;
 	#if defined(WINDOWS) && !defined(__CONSOLE__)
 	SendMessage(GUI::getInstance()->m_statusBar, WM_SETTEXT, 0, (LPARAM)">> Fetching blacklist");
@@ -603,7 +606,7 @@ ServiceManager* services)
 		if(buffer == 10 || (buffer != 121 && buffer != 89))
 		#endif
 			startupErrorMessage("Unable to fetch blacklist!");
-	}
+	}*/
 
 	std::cout << ">> Loading RSA key" << std::endl;
 	#if defined(WINDOWS) && !defined(__CONSOLE__)
