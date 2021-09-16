@@ -402,7 +402,7 @@ bool Items::loadFromXml()
 				std::cout << "[Warning - Items::loadFromXml] Malformed entry (from: \"" << strValue << "\", to: \"" << endValue << "\")" << std::endl;
 		}
 		else
-			std::cout << "[Warning - Items::loadFromXml] No itemid found" << std::endl;
+			std::cout << "[Warning - Items::loadFromXml] ItemID: " << strValue << " was not found." << std::endl;
 	}
 
 	xmlFreeDoc(itemDoc);
