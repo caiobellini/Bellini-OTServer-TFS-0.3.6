@@ -1,8 +1,8 @@
 local config = {
 	daily = "no", -- allow only one enter per day? (like in global Tibia)
 	level = 100,
-	storage = 30015
-	entry =
+	storage = 30015,
+	entry =	
 	{
 		{x = 247, y = 659, z = 13},
 		{x = 247, y = 660, z = 13},
