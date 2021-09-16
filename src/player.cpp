@@ -503,10 +503,16 @@ void Player::sendIcons() const
 	}
 
 	if(getZone() == ZONE_PROTECTION)
+	{
 		icons |= ICON_PROTECTIONZONE;
 
-	if(pzLocked)
+		if(hasBitSet(ICON_SWORDS, icons))
+			icons &= ~ICON_SWORDS;
+	}
+	else if (pzLocked)
+	{
 		icons |= ICON_PZ;
+	}
 
 	client->sendIcons(icons);
 }
@@ -1404,6 +1410,7 @@ void Player::onAttackedCreatureChangeZone(ZoneType_t zone)
 		setAttackedCreature(NULL);
 		onAttackedCreatureDisappear(false);
 	}
+	sendIcons();
 }
 
 void Player::onCreatureDisappear(const Creature* creature, bool isLogout)
@@ -3470,6 +3477,7 @@ void Player::onAddCombatCondition(ConditionType_t type, bool hadCondition)
 void Player::onEndCondition(ConditionType_t type)
 {
 	Creature::onEndCondition(type);
+
 	if(type == CONDITION_INFIGHT)
 	{
 		onIdleStatus();
