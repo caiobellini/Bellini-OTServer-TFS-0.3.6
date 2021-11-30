@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talkactions>
+	<!-- Test -->
+	<talkaction log="no" words="/livingStatue"  event="script" value="livingstatue.lua"/>
+	<talkaction log="no" words="/changeVoc"  event="script" value="changevocation.lua"/>
+
 	<!-- Gods -->
 	<talkaction log="yes" words="/addskill"  event="function" value="addSkill"/>
 	<talkaction log="yes" words="/attr"  event="function" value="thingProporties"/>
