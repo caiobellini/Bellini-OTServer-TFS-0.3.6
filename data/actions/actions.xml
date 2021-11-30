@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
+	<!-- Seal System -->
+	<action itemid="2401" event="script" value="sealsystem/sealmonster.lua" allowFaruse="5"/>
+
 	<!-- Quests -->
 	<action actionid="2000" event="script" value="quests/system.lua"/>
 	<action actionid="2001" event="script" value="quests/system.lua"/>
